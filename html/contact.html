@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LerSMarV - Über mich</title>
+        <link rel="stylesheet" href="../css/format.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="menu">
+                    <li><a href="index.html">Über Mich</a></li>
+                    <li><a href="skills.html">Fähigkeiten</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                    <li><a href="gaming.html">Gaming</a></li>
+                    <li><a tabindex="0" aria-current="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <h1>Kontakt</h1>
+        </header>        
+        <main>
+            <center><p>Wenn Sie mehr über mich und meine Fähigkeiten erfahren möchten, oder wenn Sie mich für ein Projekt kontaktieren möchten, stehe ich Ihnen gerne zur Verfügung. Sie können mich über das Kontaktformular auf dieser Website erreichen.</p></center>
+	    <form action="../php/send_email.php" method="POST">
+    		<label for="name">Name:</label>
+    		<input type="text" id="name" name="name" required>
+    		<label for="email">E-Mail:</label>
+    		<input type="email" id="email" name="email" required>
+    		<label for="betreff">Betreff:</label>
+    		<input type="text" id="betreff" name="betreff" required>
+    		<label for="nachricht">Nachricht:</label>
+    		<textarea id="nachricht" name="nachricht" required></textarea>
+    		<button type="submit">Absenden</button>
+	    </form>
+        </main>
+        <footer>
+            <p>&copy; 2024 LerSMarV</p>
+        </footer>
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="video/stockvideo_01171.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </body>
+</html>
