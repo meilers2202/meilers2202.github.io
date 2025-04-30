@@ -1,0 +1,323 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgb(88, 88, 88);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+img[id="back"] {
+    margin-right: 70px;
+    width: 30px;
+}
+
+img[id="home"] {
+    margin-left: 70px;
+    width: 30px;
+}
+
+#item-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 2rem;
+    background-color: #a4a4a4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+input, select, button {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"], input[type="number"] {
+    flex-grow: 1;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#sort-options {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+#sort-options button {
+    background-color: #ecf0f1;
+    color: #34495e;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+#sort-options button:hover {
+    background-color: #bdc3c7;
+}
+
+#shopping-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#shopping-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#shopping-list li:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+#total, #budget-container {
+    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#budget-container input {
+    width: 100px;
+    margin-left: 10px;
+}
+
+#list-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#import-list {
+    display: none;
+}
+
+label[for="import-list"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+label[for="import-list"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    #item-form {
+        flex-direction: column;
+    }
+
+    #sort-options {
+        text-align: center;
+    }
+
+    #list-actions {
+        flex-wrap: wrap;
+    }
+}
+
+/* Animationen */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#shopping-list li {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Zusätzliche Stile für bessere Benutzerfreundlichkeit */
+.item-total {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+#budget-remaining {
+    margin-left: 10px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#budget-remaining.positive {
+    color: #27ae60;
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+#budget-remaining.negative {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Verbessertes Formular-Layout */
+#category-input, #unit-input {
+    flex-basis: 150px;
+}
+
+#quantity-input, #price-input {
+    flex-basis: 100px;
+}
+
+/* Neue Stile für verbesserte Benutzerfreundlichkeit */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Verbesserte Button-Styles */
+.btn-primary {
+    background-color: #3498db;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+}
+
+/* Verbesserte Listenelemente */
+.list-item-content {
+    flex-grow: 1;
+}
+
+.list-item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Zusätzliche Animationen */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.highlight {
+    animation: pulse 0.5s ease-in-out;
+}

@@ -1,0 +1,274 @@
+
+
+html {
+    min-height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    background: linear-gradient(45deg, #34495E, #FF8C00); /* Dunkelblau und Orange */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #480a0a; /* Dunkelblau */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #FFFFFF; /* Weiß */
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.8); /* Orange für Akzent */
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#content {
+    background: rgba(0, 0, 0, 0.428); /* Sanftes Blau */
+    padding: 40px;
+    border-radius: 25px;
+    border: 4px solid #FF8C00; /* Orange Akzentfarbe */
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.8);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: contentSlide 1s ease-in-out;
+    max-width: 1200px;
+}
+
+@keyframes contentSlide {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+#Bild, #pokemon-name {
+    display: flex;
+    flex-direction: column;
+}
+
+#Bild {
+    border: 4px solid #FF8C00; /* Orange */
+    justify-self: center;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8);
+    margin-bottom: 20px;
+    animation: slightTilt 4s ease-in-out infinite alternate;
+}
+
+@keyframes slightTilt {
+    0% { transform: rotate(-4deg); }
+    100% { transform: rotate(4deg); }
+}
+
+#pokemon-name {
+    color: #FF8C00; /* Orange Akzentfarbe */
+    text-transform: capitalize;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(255, 140, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+#hp, #kategorie, #id-id, .abilities, #Evolution, #kategorienpokemon {
+    display: flex;
+    color: white;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #FF8C00; /* Orange */
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#kategorie {
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.attack-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    animation: tablePulse 1.5s infinite;
+
+}
+
+@keyframes tablePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.row {
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    text-transform: capitalize;
+    justify-self: center;
+    align-self: center;
+}
+
+.cell {
+    display: table-cell;
+    justify-self: center;
+    align-self: center;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #FF8C00; /* Orange */
+    color: #FF8C00; /* Orange */
+    background-color: #000000; /* Dunkelblau */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3, #kategorietext{
+    text-transform: capitalize;
+    color: #FF8C00; /* Orange */
+    text-decoration: underline;
+    font-size: 3rem;
+    text-shadow: 3px 3px 12px rgba(255, 140, 0, 0.8);
+    font-weight: bold;
+}
+
+#attackenContainer {
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#attackenContainer.show {
+    opacity: 1; /* Setzt die Sichtbarkeit, wenn .show hinzugefügt wird */
+}
+
+#toggleAttacksBtn {
+    padding: 15px 30px;
+    background-color: #FF8C00; /* Orange */
+    color: black;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#searchInput, #pokemonDropdown, #searchInputkategorien, #kategorienDropdown {
+    max-width: 200px;
+    background: #FF8C00; /* Orange */
+    border-radius: 8px;
+    border: 2px solid #ffdb33;
+    padding: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+#searchInput:focus, #pokemonDropdown:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 1);
+}
+
+#searchInput {
+    height: 22px;
+}
+
+#pokemonDropdown {
+    height: 55px;
+}
+
+#btn  {
+    background: #27AE60; /* Sanftes Grün */
+    color: black;
+    border: 3px solid #FF8C00; /* Orange */
+    padding: 15px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#kategorieButton, #pokemonButton {
+    display: flex;
+    flex-direction: row;
+    background: #FF8C00; /* Sanftes Grün */
+    color: black;
+    border: 3px solid #000000; /* Orange */
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8);
+    padding: 15px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    height: 60px;
+}
+
+#buttons {
+    display: flex;
+}
+
+#pokemonButton {
+    margin-bottom: 10px;
+}
+
+#btn:hover {
+    background-color: #2ECC71; /* Helles Grün */
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8);
+}
+
+
+@media (max-width: 781px) {
+    #content {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 500px) {
+    #content {
+        width: 65vw;
+    }
+}
+
+@media (min-width: 781px) {
+    #content {
+        width: 80vw;
+    }
+}

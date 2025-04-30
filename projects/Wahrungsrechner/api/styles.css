@@ -1,0 +1,155 @@
+html {
+    min-height: 100vh; /* Passt die minimale Höhe an, sodass Inhalte größer sein können */
+    width: 100%; /* Entferne die harte Begrenzung */
+    overflow-y: auto; /* Erlaubt vertikales Scrollen */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Nur die Mindesthöhe festlegen */
+    flex-direction: column;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+
+#content {
+    background: rgb(113, 113, 113);
+    padding: 20px;
+    border-radius: 10px;
+    border: yellow solid;
+    box-shadow: black 2px 2px;
+}
+
+.Bild, .pokemon-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.Bild {
+    border: yellow solid;
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    justify-self: center;
+    align-self: center; 
+    background: rgba(0, 0, 0, 0.355);
+}
+
+/* Großschreiben des ersten Buchstabens im Pokémon-Namen */
+.pokemon-name {
+    color: yellow;
+    text-transform: capitalize; /* Macht den ersten Buchstaben jedes Wortes groß */
+}
+
+.hp {
+    display: flex;
+    color: white;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    background: rgba(0, 0, 0, 0.326);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    border: yellow solid;
+    border-radius: 20px; 
+}
+
+abilities {
+    display: flex;
+    color: white;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    background: rgba(0, 0, 0, 0.326);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    border: yellow solid;
+    border-radius: 20px; 
+}
+
+#f22f {
+    flex-direction: row;
+}
+
+#searchInput, #pokemonDropdown {
+    max-width: 100px;
+    background: rgb(255, 255, 0);
+    border-radius: 8px;
+    border: rgb(255, 255, 0) solid;
+}
+
+#searchInput {
+    height: 19px;
+}
+
+#pokemonDropdown {
+    height: 24px;
+}
+
+#btn {
+    background: green;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.attack-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .row {
+    display: table-row;
+  }
+  
+  .cell {
+    display: table-cell;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid yellow;
+    color: yellow;
+    background-color: #444;
+  }
+
+h3 {
+    color: yellow;
+    text-decoration: underline;
+}
+
+#attackenContainer {
+    display: block; /* Standardmäßig sichtbar */
+    transition: opacity 0.3s ease-in-out; /* Optional: Sanfter Übergang */
+  }
+  
+  #toggleAttacksBtn {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: yellow;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #toggleAttacksBtn:hover {
+    background-color: orange;
+  }
+  

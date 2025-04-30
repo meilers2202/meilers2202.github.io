@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LerSMarV - Finance Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Personal Finance Tracker</h1>
+  </header>
+
+  <main>
+    <!-- Einnahmen und Ausgaben hinzufügen -->
+    <section id="transaction-form">
+      <h2>Neue Transaktion hinzufügen</h2>
+      <form id="add-transaction">
+        <label for="transaction-type">Typ:</label>
+        <select id="transaction-type">
+          <option value="income">Einnahme</option>
+          <option value="expense">Ausgabe</option>
+        </select>
+
+        <label for="transaction-category">Kategorie:</label>
+        <select id="transaction-category">
+          <option value="food">Essen</option>
+          <option value="transport">Transport</option>
+          <option value="entertainment">Unterhaltung</option>
+          <option value="other">Sonstiges</option>
+        </select>
+
+        <label for="transaction-amount">Betrag (€):</label>
+        <input type="number" id="transaction-amount" step="0.01" required>
+
+        <label for="transaction-date">Datum:</label>
+        <input type="date" id="transaction-date" required>
+
+        <button type="submit">Hinzufügen</button>
+      </form>
+    </section>
+
+    <!-- Transaktionsliste -->
+    <section id="transaction-list">
+      <h2>Transaktionen</h2>
+      <ul id="transactions">
+        <!-- Dynamische Inhalte kommen hierhin -->
+      </ul>
+    </section>
+
+    <!-- Budgetübersicht -->
+    <section id="budget-overview">
+      <h2>Budgetübersicht</h2>
+      <p>Verfügbares Budget: <span id="available-budget">0</span> €</p>
+    </section>
+
+    <!-- Diagramme -->
+    <section id="charts">
+      <h2>Ausgaben-Analyse</h2>
+      <canvas id="expense-chart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Personal Finance Tracker</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

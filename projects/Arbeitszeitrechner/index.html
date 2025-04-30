@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LerSMarV - Stundenzähler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><a href="../../../projects.html"><img id="back" src="back.svg"></a>Arbeitszeit Rechner<a href="../../../index.html"><img id="home" src="home.svg"></a></h1>
+    <form id="timeForm">
+        <!-- Abschnitt für Arbeitszeit -->
+        <div>      
+            <div class="time-section">
+                    <h2>Arbeitszeit</h2>
+                <label for="start">Arbeitsbeginn (z.B. 07:00):</label>
+                <input type="time" id="start" required><br>
+                
+                <label for="end">Arbeitsende (z.B. 17:00):</label>
+                <input type="time" id="end" required><br>
+                <button type="button" id="toggleBreaksBtn">Pausen überspringen</button><br>
+            </div>
+            
+            <!-- Abschnitt für Pausen -->
+            <div class="break-section" id="breakSection">
+                <h2>Pausen</h2>
+                <label for="breakStart">Frühstückspause (z.B. 09:00):</label>
+                <input type="time" id="breakStart"><br>
+                
+                <label for="breakEnd">Ende der Frühstückspause (z.B. 09:30):</label>
+                <input type="time" id="breakEnd"><br>
+                
+                <label for="lunchStart">Mittagspause (z.B. 12:00):</label>
+                <input type="time" id="lunchStart"><br>
+                
+                <label for="lunchEnd">Ende der Mittagspause (z.B. 13:00):</label>
+                <input type="time" id="lunchEnd"><br>
+            </div>
+        </div>
+        <!-- Bereich für Tätigkeiten -->
+        <div id="activitiesSection" style="display: none;">
+            <div id="result"></div>
+            <h2>Aufzeichnung der Tätigkeiten</h2>
+            <div id="activityInputs">
+                <label for="activityDescription">Tätigkeit:</label>
+                <input type="text" id="activityDescription" placeholder="" required><br>
+                <label for="activityStart">Von:</label>
+                <input type="time" id="activityStart" required><br>
+                <label for="activityEnd">Bis:</label>
+                <input type="time" id="activityEnd" required><br>
+                <button type="button" id="addActivityBtn">Zur Liste hinzufügen</button>
+            </div>
+            <h3>Tätigkeiten:</h3>
+            <ul id="activitiesList"></ul>
+            <p id="totalActivityTime">Gesamtzeit der Tätigkeiten: 0 Stunden 0 Minuten</p>
+        </div>        
+
+        <!-- Button zum Pausen anzeigen/überspringen -->
+
+        <button type="button" id="calculateBtn">Berechnen</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

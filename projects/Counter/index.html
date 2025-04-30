@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LerSMarV - Counter</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1><a href="../../../projects.html"><img id="back" src="back.svg"></a>Counter<a href="../../../index.html"><img id="home" src="home.svg"></a></h1>
+        <h2 id="count-el">0</h2>
+        <div id="count-btns">
+            <button id="increment-btn" onclick="increment()">INCREMENT</button>
+            <button id="double-btn" onclick="double()">DOUBLE</button>
+            <button id="decrement-btn" onclick="decrement()">DECREMENT</button>
+        </div>
+        <div id="save-btns">
+            <button id="save-btn" onclick="save()">SAVE</button>
+            <button id="load-btn" onclick="showLoadOptions()">LOAD</button>
+            <button id="reset-btn" onclick="reset()">RESET</button>
+        </div>
+        <div id="load-options" style="display: none;">
+            <h3>Load Options</h3>
+            <ul id="load-list">
+                <!-- Dynamisch gefüllte Liste -->
+            </ul>
+        </div>        
+        <script src="index.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: rgb(163, 163, 163);
+}
+
+.pricing-table {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 20px;
+}
+
+img[id="back"] {
+    margin-right: 70px;
+    width: 30px;
+}
+
+img[id="home"] {
+    margin-left: 70px;
+    width: 30px;
+}
+
+.basic-plan {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align:center;
+}
+
+.pro-plan {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.advanced-plan {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.plan-price {
+    font-size: 48px;
+    color: #4caf50;
+    margin: 20px 0;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+    background-color: #45a049;
+}
+
+.highlight {
+    background-color: #ffeb3b;
+    transform: scale(1.05);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+    margin: 20px;
+}
+
+@media (max-width: 950px) {
+    .pricing-table {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .basic-plan, .pro-plan, .advanced-plan {
+        width: 90vw;
+    }
+}
+
+.feature-item {
+    display: flex;
+    justify-content: space-between; /* Platzierung der Elemente auf der Achse */
+    align-items: center; /* Vertikale Zentrierung der Elemente */
+}
+
+.feature-name {
+    flex: 1; /* "Storage" bleibt links */
+    text-align: left; /* Optional: könnte auch Standard sein */
+}
+
+.feature-value {
+    flex: 1; /* "10 GB" wird rechts oder in der Mitte, je nach Bedarf */
+    text-align: center; /* Rechtsbündig */
+}
+
+h1 a {
+    margin-right: 0;
+}

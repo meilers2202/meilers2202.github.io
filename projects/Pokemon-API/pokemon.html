@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>LerSMarV - PokemonAPI</title>
+  </head>
+  <body>
+    <h1>Pokemon API</h1>
+    <h2>Search . . . </h2>
+    <div id="buttons">
+      <button id="pokemonButton" onclick="toggleFirst()">Pokémon</button>
+      <button id="kategorieButton" onclick="toggleSecond()">Kategorie</button>
+    </div>
+    <div id="first" style="display:none;">
+      <h1>Search a Pokemon</h1>
+      <div id="f22f">
+        <input id="searchInput" type="text" placeholder="Search...">
+         or
+        <select id="pokemonDropdown" onchange="loadData(this.value)">
+          <option>Select Pokémon...</option>
+        </select>
+      </div>
+      <button id="btn" onclick="searchData()">Search</button>
+      <div id="content">
+        <div id="pokemon-name"></div>
+        <div id="id-id">Nr. ####</div>
+        <img id ="Bild" src="" alt="">
+        <div class="pokemon-type"></div>
+        <h3>Stats</h3>
+        <div id="hp">
+        </div>
+        <h3>Evolution</h3>
+        <div id="Evolution">
+        </div>
+        <h3>Kategorie</h3>
+        <div id="kategorie">
+        </div>
+        <h3>Fähigkeiten</h3>
+        <abilities id="abilities">
+        </abilities>
+        <h3>Attacken</h3>
+        <button id="toggleAttacksBtn" onclick="toggleAttacks()">Ein-/Ausblenden</button>
+        <div id="attackenContainer" class="attack-table">
+          <div class="row">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="second" style="display:none;">
+      <h1>Kategoriesuche</h1>
+      <div id="f22f">
+        <input id="searchInputkategorien" type="text" placeholder="Search...">
+        or
+       <select id="kategorienDropdown" onchange="loadKategorie(this.value)">
+         <option>Select Kategorie...</option>
+       </select>
+      </div>
+      <button id="btn" onclick="searchKategorie()">Search</button>
+      <div id="content">
+        <h3 id="kategorietext">Kategorie</h3>
+        <div id="kategorienpokemon">Pokémon</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

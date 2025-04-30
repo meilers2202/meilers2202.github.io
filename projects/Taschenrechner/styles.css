@@ -1,0 +1,109 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #8b8b8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+img[id="back"] {
+    margin-right: 70px;
+    width: 30px;
+}
+
+img[id="home"] {
+    margin-left: 70px;
+    width: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+#summe {
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#rows1, #rows2, #rows0 {
+    display: flex;
+    flex-direction: column;
+}
+
+#row1_1, #row1_2, #row1_3, #row1_4, #rowmath, #rowmath1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#rows1 div button {
+    background-color: #4d4c4c;
+    color: white;
+}
+
+#rows1 div button:hover {
+    background-color: #5f5f5f;
+}
+
+button {
+    background-color: #5f5f5f;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #4d4c4c;
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Styling for operator buttons */
+button:nth-child(4), button:nth-child(8), button:nth-child(12), button:nth-child(16) {
+    background-color: #ff9500;
+    color: white;
+}
+
+button:nth-child(16) {
+    background-color: #007aff;
+}
+
+button:nth-child(4) {
+    background-color: #4d4c4c;
+    color: white;
+}
+
+button:nth-child(4):hover {
+    background-color: #5f5f5f;
+}

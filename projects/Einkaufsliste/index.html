@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LerSMarV - Einkaufsliste</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="../../../projects.html"><img id="back" src="back.svg"></a>Einkaufsliste<a href="../../../index.html"><img id="home" src="home.svg"></a></h1>
+        <form id="item-form">
+            <input type="text" id="item-input" placeholder="Artikel" required>
+            <input type="number" id="quantity-input" placeholder="Anzahl" min="1" value="1" required>
+            <select id="unit-input">
+                <option value="Stück">Stück</option>
+                <option value="kg">kg</option>
+                <option value="Liter">Liter</option>
+            </select>
+            <input type="number" id="price-input" placeholder="Preis €" min="0" step="0.01" required>
+            <select id="category-input">
+                <option value="Allgemein">Allgemein</option>
+                <option value="Obst & Gemüse">Obst & Gemüse</option>
+                <option value="Milchprodukte">Milchprodukte</option>
+                <option value="Getränke">Getränke</option>
+            </select>
+            <button type="submit">Hinzufügen</button>
+        </form>
+        <div id="sort-options">
+            Sortieren nach: 
+            <button id="sort-name">Name</button>
+            <button id="sort-price">Preis</button>
+            <button id="sort-category">Kategorie</button>
+        </div>
+        <ul id="shopping-list"></ul>
+        <div id="total">Gesamtsumme: 0.00 €</div>
+        <div id="budget-container">
+            Budget: <input type="number" id="budget-input" min="0" step="0.01">
+            <span id="budget-remaining"></span>
+        </div>
+        <div id="list-actions">
+            <button id="save-template">Als Vorlage speichern</button>
+            <button id="load-template">Vorlage laden</button>
+            <button id="export-list">Exportieren</button>
+            <input type="file" id="import-list" accept=".json">
+            <label for="import-list">Importieren</label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

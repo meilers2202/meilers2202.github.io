@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LerSMarv - Gaming</title>
+        <link rel="stylesheet" href="css/format.css">
+    </head>
+    <body>
+        <header>
+            <div id="imagenavcontainer">
+                <button class="image-button" onclick="darkmode()">
+                    <img id="img-off" src="img/toggleoff.svg" alt="Icon" width="20" height="20"><img id="img-on" src="img/toggleon.svg" alt="Icon" width="20" height="20">Darkmode
+                </button>   
+            <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="menu">
+                    <li><a href="index.html">Über Mich</a></li>
+                    <li><a href="skills.html">Fähigkeiten</a></li>
+                    <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                    <li><a tabindex="0" aria-current="gaming.html">Gaming</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            </div>
+            <h1>Gaming</h1>
+        </header>
+        <main>
+            <center><p>Ich bin jemand, der sich eher mit technischen und herausfordernden Spielen befasst, in denen technisches Wissen, Kreativität und Durchhaltevermögen gefragt sind. </p>
+            <p>In Satisfactory fasziniert mich das Optimieren komplexer Produktionsketten und die Herausforderung, effiziente Fabriken zu entwickeln.</p>
+            <p>Bei DayZ liegt mein Fokus auf strategischer Planung und dem Meistern intensiver Überlebenssituationen, wobei ich auf Ressourcenmanagement und taktisches Vorgehen setze.</p>
+            <p>In Minecraft nutze ich meine Kreativität und technisches Verständnis, um ambitionierte Bauprojekte umzusetzen, die oft auch Redstone-Mechaniken und automatisierte Systeme umfassen.</p></center>
+            <div class="container">
+                <center>
+                <section id="spiele">
+                    <h2>Spiele</h2>
+                    <div class="gaming">
+                        <p><a href="https://www.satisfactorygame.com/">Satisfactory</a></p>
+                        <p><a href="https://dayz.com/">DayZ</a></p>
+                        <p><a href="https://www.minecraft.net/de-de">Minecraft</a></p>
+                    </div>
+                </section>
+                <section id="platt">
+                    <h2>Plattformen</h2>
+                    <p>PC</p>
+                    <p><a href="https://www.playstation.com/de-de/ps4/">Playstation 4</a></p>
+                </section>
+                </center>
+                <div class="clearfix"></div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 LerSMarV</p>
+        </footer>
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="video/stockvideo_01171.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>

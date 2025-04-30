@@ -1,0 +1,204 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #e2e2e4;
+    color: #333;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+img[id="back"] {
+    margin-right: 70px;
+    width: 30px;
+}
+
+img[id="home"] {
+    margin-left: 70px;
+    width: 30px;
+}
+
+#timeForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-section, .break-section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    width: 30%; /* Labels nehmen 60% des Containers ein */
+    display: inline-block; /* Label und Input auf einer Linie */
+    text-align: left;
+    vertical-align: middle; /* Vertikale Ausrichtung */
+    margin-bottom: 10px;
+}
+
+input[type="time"], input[type="text"], .delete-btn {
+    width: 65%; /* Eingabefelder nehmen 35% ein */
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle; /* Vertikale Ausrichtung */
+}
+
+input[type="time"] {
+    width: 30%;
+}
+
+label[for="activityEnd"], label[for="activityStart"] {
+    width: 65%
+}
+
+label {
+    width: 69%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.settings-button:hover {
+    background-color: white;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+
+.time-section label,
+.break-section label {
+    margin-bottom: 12px;body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #e2e2e4;
+    color: #333;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+input[type="time"], input[type="text"], .delete-btn {
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type="time"] {
+    width: 30%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.time-section label, .break-section label, 
+.time-section input, .break-section input {
+    margin-bottom: 12px;
+}
+}
+
+.time-section input,
+.break-section input {
+    margin-bottom: 12px;
+}
+
+label[for="activityDescription"] {
+    width: 30%;
+}
+
+.delete-btn {
+    font-size: 13px;
+    width: 20%;
+    margin: 10px;
+}
+
+@media (max-width: 700px) {
+    label {
+        width: 68%;
+    }
+
+    .delete-btn {
+        font-size: 10px;
+        width: 20%;
+        margin: 10px;
+    }
+}

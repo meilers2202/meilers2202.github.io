@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetter App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="searchBar">
+        <input type="text" id="cityInput" placeholder="Stadt . . .">
+        <button id="searchButton" onclick="cityset()">Suchen</button>
+    </div>
+    <div id="weatherInfo">
+        <h2 id="cityName">Deutschland</h2>
+        <div id="days">
+            <!-- Hier werden die Wetterdaten für jeden Tag angezeigt -->
+            <div id="day-1"></div>
+            <div id="day-2"></div>
+            <div id="day-3"></div>
+            <div id="day-4"></div>
+            <div id="day-5"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

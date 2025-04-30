@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Fetch</title>
+  </head>
+  <body>
+    <h1>Search a Pokemon</h1>
+    <div id="f22f">
+      <input id="searchInput" type="text" placeholder="Search...">
+       or
+      <select id="pokemonDropdown" onchange="loadData(this.value)">
+        <option>Select Pokémon...</option>
+      </select>
+    </div>
+    <button id="btn" onclick="searchData()">Search</button>
+
+    <div id="content">
+      <div class="pokemon-name">Ditto</div>
+      <img class="Bild" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Ditto">
+      <div class="pokemon-type"></div>
+      <h3>Stats</h3>
+      <div class="hp">
+        HP: 35<br>
+        Attack: 40<br>
+        Defense: 45<br>
+        Speed: 90<br>
+        Special Attack: 60<br>
+        Special Defense: 60<br>
+      </div>
+      <h3>Fähigkeiten</h3>
+      <abilities>
+        Limber<br>
+        Imposter
+      </abilities>
+      <h3>Attacken</h3>
+      <button id="toggleAttacksBtn" onclick="toggleAttacks()">Ein-/Ausblenden</button>
+      <div id="attackenContainer" class="attack-table">
+        <div class="row">
+          <div class="cell">Reflect</div>
+          <div class="cell">Bide</div>
+          <div class="cell">Waterfall</div>
+          <div class="cell">Skull-Bash</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

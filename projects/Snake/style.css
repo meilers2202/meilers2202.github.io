@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Schriftart für die Webseite */
+    background-color: #9f9f9f; /* Helles Blau als Hintergrundfarbe für eine freundliche Optik */
+    color: #333; /* Dunkelgraue Textfarbe für guten Kontrast */
+    display: flex; /* Flexbox-Layout für die Anordnung von Elementen */
+    flex-direction: column; /* Anordnung der Kindelemente in einer Spalte */
+    align-items: center; /* Zentriert die Kindelemente horizontal */
+    justify-content: center; /* Zentriert die Kindelemente vertikal */
+    height: 100vh; /* Höhe des Body-Elements auf 100% der Fensterhöhe setzen */
+    margin: 0; /* Standardmäßigen Außenabstand entfernen */
+    padding: 20px; /* Innenabstand um den Inhalt hinzufügen */
+}
+
+h1 {
+    justify-self: center;
+    align-self: center;
+}
+
+img[id="back"] {
+    margin-right: 70px;
+    width: 30px;
+}
+
+img[id="home"] {
+    margin-left: 70px;
+    width: 30px;
+}
+
+#gameBoard {
+    display: grid; /* Grid-Layout für die Elemente im Spielfeld */
+    grid-template-columns: repeat(3, 1fr); /* Drei gleich breite Spalten */
+    grid-gap: 10px; /* Abstand zwischen den Gitternetz-Zellen */
+    justify-items: center; /* Zentriert die Zellen horizontal im Raster */
+    align-items: center; /* Zentriert die Zellen vertikal im Raster */
+    margin-top: 20px; /* Abstand nach oben */
+    background-color: rgb(0, 0, 0); /* Schwarze Hintergrundfarbe */
+    border: 2px solid #3498db; /* Hellblauer Rahmen */
+    border-radius: 15px; /* Stärker abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Weicher Schatten für einen 3D-Effekt */
+    padding: 20px; /* Innenabstand um den Inhalt hinzufügen */
+    text-align: center; /* Zentriert den Text innerhalb des Elements */
+    max-width: 400px; /* Maximale Breite für bessere Lesbarkeit */
+    width: 100%; /* Responsive Breite */
+}
+
+#scoreText {
+    font-size: 2rem; /* Größere Schrift für bessere Sichtbarkeit */
+    text-align: center; /* Text zentrieren */
+    margin-bottom: 20px; /* Abstand nach unten */
+    color: #555; /* Dunkelgraue Schriftfarbe */
+}
+
+#resetBtn {
+    display: block; /* Als Blockelement anzeigen */
+    margin-top: 20px; /* Abstand nach oben */
+    width: 100%; /* Breite auf 100% des übergeordneten Elements setzen */
+    text-align: center; /* Text zentrieren */
+    cursor: pointer; /* Zeigt einen Zeiger an, wenn der Mauszeiger über den Button bewegt wird */
+    font-size: 1.1rem; /* Etwas größere Schriftgröße */
+    background-color: #2ecc71; /* Grüne Hintergrundfarbe für positive Aktionen */
+    color: white; /* Weiße Schriftfarbe */
+    border: none; /* Standardrahmen entfernen */
+    border-radius: 25px; /* Abgerundete Ecken */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Weiche Übergänge für Hover- und Klick-Effekte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatteneffekt für den Button */
+    padding: 12px 25px; /* Größere Klickfläche für bessere Benutzerfreundlichkeit */
+}
+
+#resetBtn:hover {
+    background-color: #27ae60; /* Dunkleres Grün, wenn die Maus über den Button bewegt wird */
+    transform: scale(1.05); /* Leichtes Vergrößern des Buttons bei Hover */
+}
+
+#resetBtn:active {
+    background-color: #1e8449; /* Dunkelgrüner Hintergrund beim Klicken */
+    transform: scale(0.95); /* Leichtes Verkleinern des Buttons beim Klicken */
+}
+
+@media (max-width: 768px) {
+    #scoreText {
+        font-size: 1.5rem; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+
+    #resetBtn {
+        font-size: 1rem; /* Kleinere Buttons für mobile Geräte */
+        padding: 10px 20px; /* Innenabstand anpassen für bessere Lesbarkeit */
+    }
+}

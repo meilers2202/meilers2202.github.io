@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LerSMarv - Lebenslauf</title>
+        <link rel="stylesheet" href="css/format.css">
+        <script>
+            function berechneAlter(geburtsdatum) {
+                const heute = new Date();
+                const geburtstag = new Date(geburtsdatum);
+                let alter = heute.getFullYear() - geburtstag.getFullYear();
+                const monat = heute.getMonth() - geburtstag.getMonth();
+    
+                // Wenn der aktuelle Monat vor dem Geburtsmonat liegt oder der Tag noch nicht erreicht ist, ziehe ein Jahr ab
+                if (monat < 0 || (monat === 0 && heute.getDate() < geburtstag.getDate())) {
+                    alter--;
+                }
+                return alter;
+            }
+    
+            function alterAnzeigen() {
+                const alter = berechneAlter("2004-02-22"); // Dein Geburtsdatum hier im Format JJJJ-MM-TT einfügen
+                document.getElementById("alter").textContent = alter;
+            }
+    
+            window.onload = alterAnzeigen; // Funktion beim Laden der Seite ausführen
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="imagenavcontainer">
+                <button class="image-button" onclick="darkmode()">
+                    <img id="img-off" src="img/toggleoff.svg" alt="Icon" width="20" height="20"><img id="img-on" src="img/toggleon.svg" alt="Icon" width="20" height="20">Darkmode
+                </button>   
+                <nav>
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                    <ul class="menu">
+                        <li><a tabindex="0" aria-current="index.html">Über Mich</a></li>
+                        <li><a href="skills.html">Fähigkeiten</a></li>
+                        <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                        <li><a href="projects.html">Projekte</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Lebenslauf</h1>
+        </header>
+        <main>
+            <div class="lebenslauf_main">
+                <div class="c1">
+                    <div class="contact-info">
+                        <h2>Infos</h2>
+                        <p>Email: lersmarv.online@gmail.com</p>
+                        <p><a href="contact.html">Kontakt</a> </p>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="contact-info-2">
+                        <h2>Über mich</h2>
+                        <p>Name: Marvin E.</p>
+                        <p>Alter: <span id="alter"></span></p>
+                        <p>Wohnort: Sachsen</p>
+                    </div>
+                </div>
+                <div class="c3">
+                    <div class="school-1">
+                        <h2>Schulische Laufbahn</h2>
+                        <p>2024-2027 Ausbildung Anwendungsentwickler</p>
+                        <p>2019-2022 Ausbildung Anlagenmechaniker - Berufserfahrung</p>
+                        <p>2014-2019 Hauptschule - Hauptschulabschluss</p>
+                        <p>2010-2014 Grundschule</p>
+                    </div>
+                </div>
+                <div class="c4">
+                    <h2>Programmiersprachen</h2>
+                    <div class="html">
+                        <p>HTML</p>
+                        <div class="progress-bar2">
+                            <div class="progress-html"></div>
+                        </div>
+                    </div>
+                    <div class="css">
+                        <p>CSS</p>
+                        <div class="progress-bar2">
+                            <div class="progress-css"></div>
+                        </div>
+                    </div>
+                    <div class="js">
+                        <p>JavaScript</p>
+                        <div class="progress-bar2">
+                            <div class="progress-js"></div>
+                        </div>
+                    </div>
+                    <div class="python">
+                        <p>Python</p>
+                        <div class="progress-bar2">
+                            <div class="progress-py"></div>
+                        </div>
+                    </div>
+                    <div class="sql">
+                        <p>SQL</p>
+                        <div class="progress-bar2">
+                            <div class="progress-sql"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c5">
+                    <h2>Zertifikate</h2>
+                    <div class="SQL">
+                        <a href="zertifikat\image.png">SQL Zertifikat</a> 
+                        <p></p>
+                    </div>
+                </div>
+            </div>            
+        </main>
+        <footer>
+            <p>&copy; 2024 LerSMarV</p>
+        </footer>
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="video/stockvideo_01171.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>

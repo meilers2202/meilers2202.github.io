@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+}
+.checkbox {
+    width: 40px;
+    height: 40px;
+}
+.buttons {
+    margin-top: 20px;
+}

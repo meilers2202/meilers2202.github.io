@@ -1,0 +1,159 @@
+/* Basis-Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;  /* Modernere Schriftart */
+    margin: 0;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);  /* Subtiler Verlauf */
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Header */
+h1 {
+    color: #8b0000;  /* Dunkleres Rot für eleganteren Look */
+    font-size: 5vw;  /* Schriftgröße passt sich der Bildschirmbreite an */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);  /* Weicherer Textschatten */
+    width: 90%;  /* Sicherstellen, dass der Text nicht den Bildschirm verlässt */
+    max-width: 600px;  /* Begrenzung der maximalen Breite für große Bildschirme */
+}
+
+/* Spielbereich */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Dynamische Spalten */
+    gap: 10px;  /* Abstand zwischen den Karten */
+    justify-items: center;
+    align-items: center;
+    width: 100%; /* Container nimmt die gesamte verfügbare Breite ein */
+    max-width: 800px; /* Maximale Breite der Spielfläche */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Stil für die Karten */
+.card {
+    width: 20vw;  /* Kartenbreite in Bezug auf den Viewport */
+    height: 20vw;  /* Kartenhöhe in Bezug auf den Viewport */
+    max-width: 120px;  /* Maximale Breite */
+    max-height: 120px;  /* Maximale Höhe */
+    display: inline-block;
+    margin: 5px;
+    background-color: #cccccc;  /* Graue Hintergrundfarbe */
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    font-size: 5vw;  /* Schriftgröße passt sich ebenfalls der Bildschirmbreite an */
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 15px;  /* Abgerundete Ecken */
+    overflow: hidden;
+    border: 1px solid #bbb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover-Effekt für Karten */
+.card:hover {
+    transform: scale(1.05);  /* Leichter Zoom-Effekt bei Hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);  /* Stärkere Box-Schatten beim Hover */
+}
+
+/* Wenn eine Karte aufgedeckt wurde */
+.card.clicked {
+    background-color: #ffcc00;  /* Gelbe Farbe bei Klick */
+}
+
+/* Emoji ist zu Beginn unsichtbar */
+.card .emoji {
+    font-size: 6vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;  /* Emoji ist unsichtbar */
+    transition: opacity 0.3s ease;  /* Smooth transition */
+}
+
+/* Emoji sichtbar, wenn die Karte angeklickt wurde */
+.card.clicked .emoji {
+    opacity: 1;  /* Emoji sichtbar */
+}
+
+/* Wenn zwei Karten nicht übereinstimmen */
+.card.mismatch {
+    background-color: #ff6347;  /* Rote Farbe für eine nicht übereinstimmende Karte */
+}
+
+/* Revealed Zustand */
+.card.revealed {
+    background-color: #fff;
+    color: #333;
+    cursor: default;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.5em;  /* Anpassen der Basis-Schriftgröße auf mittelgroßen Bildschirmen */
+    }
+
+    h1 {
+        font-size: 6vw;  /* Für kleinere Bildschirme größere Schrift */
+    }
+
+    .game-container {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Noch flexiblere Spalten */
+        grid-auto-rows: minmax(120px, auto);  /* Automatische Anpassung der Zeilenhöhe */
+    }
+
+    .card {
+        width: 25vw;  /* Breite der Karten für kleinere Bildschirme */
+        height: 25vw;  /* Höhe der Karten */
+        font-size: 7vw;  /* Größere Schrift auf kleinen Geräten */
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 489px) {
+    body {
+        font-size: 1.2em;  /* Kleinere Schriftgröße auf sehr kleinen Geräten */
+    }
+
+    h1 {
+        font-size: 8vw;  /* Noch größere Schrift für sehr kleine Geräte */
+    }
+
+    .game-container {
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); /* Optimierung für sehr kleine Bildschirme */
+        grid-auto-rows: minmax(90px, auto);  /* Automatische Zeilenhöhe für sehr kleine Bildschirme */
+    }
+
+    .card {
+        width: 30vw;  /* Karten werden noch breiter */
+        height: 30vw;  /* Kartenhöhe wird ebenfalls größer */
+        font-size: 8vw;  /* Sehr große Schrift auf kleineren Geräten */
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+/* Zusätzliche Optimierungen */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 10vw;  /* Noch größere Schrift für extrem kleine Geräte */
+    }
+
+    .card {
+        width: 40vw;  /* Kartenbreite auf sehr kleinen Geräten */
+        height: 40vw;  /* Kartenhöhe auf sehr kleinen Geräten */
+        font-size: 10vw;  /* Sehr große Schrift auf extrem kleinen Geräten */
+        max-width: 120px;
+        max-height: 120px;
+    }
+}

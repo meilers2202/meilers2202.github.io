@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LerSMarV - Zahlenratespiel</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="../../../projects.html"><img id="back" src="back.svg"></a>Errate die Zahl<a href="../../../index.html"><img id="home" src="home.svg"></a></h1>
+        <p>Wir haben eine Zahl zwischen 1-10 ausgesucht. Kannst Du sie erraten?</p>
+        <form id="guessForm">
+            <label for="guessField">Gib Deine Zahl ein:</label>
+            <input type="number" min="1" max="10" id="guessField" required>
+            <button type="submit" id="submitGuess">Prüfe!</button>
+        </form>
+        <p id="result">
+            <output id="resultOutput">Ergebnisausgabe</output>
+        </p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+

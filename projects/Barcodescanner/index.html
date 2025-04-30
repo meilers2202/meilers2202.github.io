@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LerSMarV - Barcode Scanner</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+</head>
+<body>
+    <!-- Video-Element für den Kamera-Feed -->
+    <video id="scanner" width="100%" height="auto" style="display:none;"></video>
+
+    <!-- Debugging-Informationen -->
+    <div id="debug-info" style="position:fixed; top:10px; left:10px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 10px; font-size: 14px;"></div>
+
+    <!-- Produktinformationen -->
+    <div id="product-info">
+        <p id="product-name"></p>
+        <p id="product-manufacturer"></p>
+        <p id="product-price"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
