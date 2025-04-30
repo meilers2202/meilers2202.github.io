@@ -6,19 +6,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $betreff = htmlspecialchars(trim($_POST["betreff"]));
     $nachricht = htmlspecialchars(trim($_POST["nachricht"]));
 
-    // Empfänger-E-Mail-Adresse (deine E-Mail-Adresse)
+    // Empfï¿½nger-E-Mail-Adresse (deine E-Mail-Adresse)
     $empfaenger = "lersmarv.online@gmail.com";
 
     // Betreff der E-Mail
     $mailBetreff = "Neue Kontaktanfrage von: $name";
 
-    // Nachricht für die E-Mail
+    // Nachricht fï¿½r die E-Mail
     $mailNachricht = "Name: $name\n";
     $mailNachricht .= "E-Mail: $email\n";
     $mailNachricht .= "Betreff: $betreff\n";
     $mailNachricht .= "Nachricht:\n$nachricht";
 
-    // Zusätzliche Header (Absenderinformationen)
+    // Zusï¿½tzliche Header (Absenderinformationen)
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
 
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: danke.html");
         exit();
     } else {
-        echo "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.";
+        echo "Fehler beim Senden der Nachricht. Bitte versuchen Sie es spï¿½ter erneut.";
     }
 }
 ?>
